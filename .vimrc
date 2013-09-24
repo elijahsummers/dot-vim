@@ -32,3 +32,11 @@ hi SpecialKey ctermfg=7 guifg=gray
 set smartindent
 set autoindent
 filetype indent off
+
+"
+" Plugins
+"
+
+" pdv PHP doc
+let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
+autocmd FileType php nnoremap <Leader>p :call pdv#DocumentWithSnip()<CR>
