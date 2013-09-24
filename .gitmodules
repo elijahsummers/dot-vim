@@ -4,3 +4,6 @@
 [submodule ".vim/bundle/ultisnips"]
 	path = .vim/bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule ".vim/bundle/vmustache"]
+	path = .vim/bundle/vmustache
+	url = https://github.com/tobyS/vmustache.git
