@@ -40,3 +40,6 @@ filetype indent off
 " pdv PHP doc
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 autocmd FileType php nnoremap <Leader>p :call pdv#DocumentWithSnip()<CR>
+
+" Open NERDTree on startup (when no file is given as arg)
+autocmd vimenter * if !argc() | NERDTree | endif
