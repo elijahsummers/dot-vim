@@ -29,13 +29,19 @@ set list
 set listchars=tab:⌐⋅,trail:-
 hi SpecialKey ctermfg=7 guifg=gray
 
-set smartindent
-set autoindent
-filetype indent off
+"set smartindent
+"set autoindent
+filetype indent on
+
+" Treat smarty templates as html, until I find a better solution.
+au BufNewFile,BufRead *.tpl set filetype=html
 
 "
 " Plugins
 "
+
+" Load matchit version that ships with Vim
+runtime! macros/matchit.vim
 
 " pdv PHP doc
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
