@@ -6,7 +6,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 filetype plugin on
-colorscheme murphy
+colorscheme jellybeans
 set cc=80
 set relativenumber
 let mapleader = ','
@@ -49,3 +49,6 @@ autocmd FileType php nnoremap <Leader>p :call pdv#DocumentWithSnip()<CR>
 
 " Open NERDTree on startup (when no file is given as arg)
 autocmd vimenter * if !argc() | NERDTree | endif
+
+" Set which javascript libraries to add to syntax highlighting.
+let g:used_javascript_libs = 'jquery,underscore,backbone'
