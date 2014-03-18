@@ -12,7 +12,8 @@ set relativenumber
 let mapleader = ','
 
 if has('gui_running')
-  set guifont=DejaVu\ Sans\ Mono\ 9
+  "set guifont=DejaVu\ Sans\ Mono\ 9
+  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
   " Remove toolbar
   set guioptions -=T
   " Remove menu
@@ -52,3 +53,6 @@ autocmd vimenter * if !argc() | NERDTree | endif
 
 " Set which javascript libraries to add to syntax highlighting.
 let g:used_javascript_libs = 'jquery,underscore,backbone'
+
+" Add powerline font symbols
+let g:airline_powerline_fonts = 1
