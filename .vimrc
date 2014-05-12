@@ -5,15 +5,24 @@ set modelines=0
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
+if &t_Co > 2 || has("gui_running")
+  syntax enable
+  "set hlsearch
+endif
+
 filetype plugin on
 colorscheme jellybeans
-set cc=80
+set cc=80,120
 set relativenumber
 let mapleader = ','
 
 if has('gui_running')
-  "set guifont=DejaVu\ Sans\ Mono\ 9
-  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
+  if has('gui_macvim')
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
+  else
+    "set guifont=DejaVu\ Sans\ Mono\ 9
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
+  endif
   " Remove toolbar
   set guioptions -=T
   " Remove menu
