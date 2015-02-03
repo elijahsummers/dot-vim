@@ -57,8 +57,9 @@ runtime! macros/matchit.vim
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 autocmd FileType php nnoremap <Leader>p :call pdv#DocumentWithSnip()<CR>
 
-" Open NERDTree on startup (when no file is given as arg)
-autocmd vimenter * if !argc() | NERDTree | endif
+" Open NERDTree on startup (when no file/stdin is given as arg)
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Set which javascript libraries to add to syntax highlighting.
 let g:used_javascript_libs = 'jquery,underscore,backbone'
