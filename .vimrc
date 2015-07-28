@@ -66,3 +66,6 @@ let g:used_javascript_libs = 'jquery,underscore,backbone'
 
 " Add powerline font symbols
 let g:airline_powerline_fonts = 1
+
+" Load snippets from plugins (assuming they have a folder named 'snippets')
+"let g:UltiSnipsSnippetDirectories=['snippets', 'UltiSnips']
