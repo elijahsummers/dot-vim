@@ -69,3 +69,6 @@ let g:airline_powerline_fonts = 1
 
 " Load snippets from plugins (assuming they have a folder named 'snippets')
 "let g:UltiSnipsSnippetDirectories=['snippets', 'UltiSnips']
+
+" Make fugitive and editorconfig play nice
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
