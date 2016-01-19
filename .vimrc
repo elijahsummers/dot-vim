@@ -72,3 +72,12 @@ let g:airline_powerline_fonts = 1
 
 " Make fugitive and editorconfig play nice
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+" Use silver searcher, if available, for fast Ctrl-P
+if executable('ag')
+  " Use Ag over Grep
+  "set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
